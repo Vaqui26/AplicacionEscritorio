@@ -20,31 +20,33 @@ namespace MiPrimerAplicacion
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             bool banderaText = true;
+            string apellido = txtApellido.Text;
+            string nombre = txtNombre.Text;
+            string edad = txtEdad.Text;
+            string direccion = txtDireccion.Text;
 
-            if (txtApellido.Text == "") { 
+            if (apellido == "") { 
                 txtApellido.BackColor = Color.Red;
                 banderaText = false;
             }
             else
                 txtApellido.BackColor = System.Drawing.SystemColors.Control;
 
-            if (txtNombre.Text == "")
-            {
+            if (nombre == ""){
                 txtNombre.BackColor = Color.Red;
                 banderaText = false;
             }
             else
                 txtNombre.BackColor = System.Drawing.SystemColors.Control;
 
-            if (txtEdad.Text == "")
-            {
+            if (edad == ""){ 
                 txtEdad.BackColor = Color.Red;
                 banderaText = false;
             }
             else
                 txtEdad.BackColor = System.Drawing.SystemColors.Control;
 
-            if (txtDireccion.Text == "")
+            if (direccion == "")
             {
                 txtDireccion.BackColor = Color.Red;
                 banderaText = false;
@@ -53,9 +55,7 @@ namespace MiPrimerAplicacion
                 txtDireccion.BackColor = System.Drawing.SystemColors.Control;
 
             if (banderaText) { 
-                txtResultado.Text = "Apellido y Nombre:" + txtApellido.Text + " " + txtNombre.Text +
-                "Edad:" + txtEdad.Text +
-                "Direccion:" + txtDireccion.Text;
+                txtResultado.Text = "Apellido y Nombre:" + apellido + " " + nombre + "\r\nEdad:" + edad + "\r\nDireccion:" + direccion;
             }
             else
                 MessageBox.Show("Complete los cuadros en rojo por favor.");
@@ -73,5 +73,6 @@ namespace MiPrimerAplicacion
         {
             this.Close();
         }
+
     }
 }

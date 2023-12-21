@@ -128,6 +128,7 @@ namespace MiPrimerAplicacion
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.Size = new System.Drawing.Size(331, 146);
             this.txtResultado.TabIndex = 9;
+            this.txtResultado.Text = "Soy un ejemplo :\r\nAhora si jiji\r\n\r\n";
             // 
             // btnAceptar
             // 
